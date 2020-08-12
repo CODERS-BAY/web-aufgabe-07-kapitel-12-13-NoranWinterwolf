@@ -108,12 +108,14 @@ div.icon::after {
     background-color: #A2DA06;
     padding: 0.7rem;
     border: 5px outset #4B6700;
-    border-radius: 15px;
+    border-radius: 100%;
     margin: 0 0.5rem;
+    transition: border, 0.3s;
 }
 .navigation a:hover{
     background-color: #82B100;
     border-style: inset;
+    border-radius: 10%;
 }
 .navigation a.aktuell {
     background-color: #82B100;
@@ -203,6 +205,12 @@ nav ul{
 nav ul li {
     list-style: none;
     padding: 0;
+    transform: rotate(0deg);
+    transition: all, 0.3s ease-in-out;
+}
+
+nav ul li:hover {
+    transform: rotate(360deg);
 }
 
 article {
