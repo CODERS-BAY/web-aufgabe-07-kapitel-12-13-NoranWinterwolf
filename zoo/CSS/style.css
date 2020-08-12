@@ -105,21 +105,22 @@ div.icon::after {
     font-weight: bold;
     text-decoration: none;
     color: #269E86;
-    background-color: #A2DA06;
+    background-color: #82B100;
     padding: 0.7rem;
-    border: 5px outset #4B6700;
+    border: 5px inset #4B6700;
     border-radius: 100%;
     margin: 0 0.5rem;
-    transition: border, 0.3s;
+    transition: all, 0.5s ease-in-out;
 }
-.navigation a:hover{
-    background-color: #82B100;
-    border-style: inset;
+.navigation a:not(.aktuell):hover{
+    background-color: #A2DA06;
+    border-style: outset;
     border-radius: 10%;
 }
 .navigation a.aktuell {
-    background-color: #82B100;
-    border-style: inset;
+    background-color: #A2DA06;
+    border-style: outset;
+    border-radius: 10%;
     text-decoration: underline;
 }
 main {
@@ -205,13 +206,9 @@ nav ul{
 nav ul li {
     list-style: none;
     padding: 0;
-    transform: rotate(0deg);
-    transition: all, 0.3s ease-in-out;
 }
 
-nav ul li:hover {
-    transform: rotate(360deg);
-}
+
 
 article {
     margin: 2rem;
@@ -235,22 +232,22 @@ article p::first-letter{
 }
 
 td#lion::before {
-    content: url(../img/lion.png);
+    content: url("../img/lion.png");
 }
 td#monkey::before {
-    content: url(../img/chimpanzee.png);
+    content: url("../img/chimpanzee.png");
 }
 td#wolf::before {
-    content: url(../img/wolf.png);
+    content: url("../img/wolf.png");
 }
 td#bear::before {
-    content: url(../img/bearicon.png);
+    content: url("../img/bearicon.png");
 }
 td#penguin::before {
-    content: url(../img/penguin.png);
+    content: url("../img/penguin.png");
 }
 td#spider::before {
-    content: url(../img/spider.png);
+    content: url("../img/spider.png");
 }
 
 dt {
@@ -408,6 +405,11 @@ input {
 }
 
 textarea {
+    border-radius: 10px;
+    resize: none;
+}
+select {
+    max-width: 50%;
     border-radius: 10px;
 }
 
