@@ -1,7 +1,9 @@
 body {
+    opacity: 0.95;
     margin: 0;
     background-image: url(../img/background.jpg);
-    margin-top: 6rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 /*Grid-Container*/
 header {
@@ -47,6 +49,16 @@ footer {
 
 /*Styling*/
 
+.headbanner {
+    background: rgb(27,120,0);
+    background: url("../img/zoo_logo.jpg"), linear-gradient(0deg, rgba(27,120,0,0.4772641478466386) 0%, rgba(25,122,1,1) 44%, rgba(14,106,0,1) 100%);    
+    background-blend-mode: multiply;
+    min-height: 60vh;
+    max-height: 60vh;
+    background-position: 50% 60%;
+    background-size: cover;
+}
+
 .headbanner p {
     font-size: 3rem;
     font-weight: bold;
@@ -74,6 +86,7 @@ div.icon {
     border: 5px outset #4B6700;
     border-bottom: none;
     border-radius: 15px 15px 0px 0px;
+    margin-top: 50vh;
 }
 div.icon::before {
     content: url("../img/bear.png");
@@ -83,7 +96,7 @@ div.icon::after {
 }
 .navigation {
     background-color: #165C00;
-    margin: 1rem 5rem;
+    margin: 52vh 0rem 0rem 0rem;
     border: 5px outset #4B6700;
     border-radius: 15px;
 }
@@ -108,13 +121,14 @@ div.icon::after {
     text-decoration: underline;
 }
 main {
-    background-color: #004538;
+    background: rgba(51, 168, 33, 0.863);
+    background: linear-gradient(0deg, rgba(52,168,33,1) 0%, rgba(34,95,19,1) 51%, rgba(10,76,0,1) 100%);
     margin: 2rem;
     border: 5px outset #4B6700;
     border-radius: 15px;
 }
 main article {
-    color: #269E86;
+    color: #DBF2B9;
 }
 #pageContainer {
     position: relative;
@@ -132,17 +146,24 @@ main article {
 
 .mainHeader {
     text-align: center;
-    background-color: #1F8100;
+    background: rgb(15, 114, 0);
+    background: linear-gradient(0deg, rgb(18, 136, 0) 0%, rgb(16, 80, 0) 52%, rgba(18, 136, 0) 100%);
     padding: 0.5rem;
     border: 5px outset #4B6700;
     border-left: none;
     border-right: none;
     color: #59D232;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    transform: scaleY(100%);
+    transition: all, 0.5s ease-in-out;
+}
+
+.mainHeader:hover {
+    transform: scaleY(75%);
 }
 
 table {
-    width: 100%;
+    min-width: 100%;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
@@ -161,6 +182,7 @@ table tr:nth-child(even) {
     background-color: #82B100;
     color: #165C00;
 }
+
 
 footer {
     background-color: #165C00;
@@ -366,11 +388,30 @@ form {
 }
 
 fieldset {
-    border-style: outset;
+    border-style: inset;
+    border-width: 5px;
+    border-color: rgb(0, 46, 36);
+    background-color: rgb(5, 56, 0);
+    border-radius: 15px;
 }
 input {
     border-radius: 10px;
     max-width: 80%;
+}
+
+textarea {
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    #headText  {
+        display: none;
+    }
+
+    .tableContainer {
+        border: 5px solid #11250a;
+        overflow-x: scroll;
+    }
 }
 
 @media screen and (max-width: 560px) {
